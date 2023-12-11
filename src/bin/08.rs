@@ -99,6 +99,14 @@ pub fn part_two(input: &str) -> Option<usize> {
     }
 
     let total = total.iter().fold(1, |acc, &x| lcm(acc, x));
+    // Bruteforce solution that takes forever:
+    // while !contains_all_zs(&start) {
+    //  let direction = moves[mi] where mi is cycled until we exit from the loop
+    //  start.map(|element| {
+    //      // transform every element to the next element following the instruction and increment
+    //      the counter
+    //  }).collect()
+    // }
     Some(total)
 }
 
